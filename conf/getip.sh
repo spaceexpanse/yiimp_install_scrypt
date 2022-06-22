@@ -28,11 +28,13 @@ echo
 #fi
 
 #if [ -z "${PUBLIC_IP:-}" ]; then
-input_box "Public IP Address" \
-"Enter the public IP address of this machine, as given to you by your ISP.
-\n\nPublic IP address:" \
-"$DEFAULT_PUBLIC_IP" \
-PUBLIC_IP
+#input_box "Public IP Address" \
+#"Enter the public IP address of this machine, as given to you by your ISP.
+#\n\nPublic IP address:" \
+#"$DEFAULT_PUBLIC_IP" \
+#PUBLIC_IP
+
+read -e -p "Enter the public IP address of this machine, as given to you by your ISP. Public IP address: " PUBLIC_IP
 
 #if [ -z "$PUBLIC_IP" ]; then
 # user hit ESC/cancel
