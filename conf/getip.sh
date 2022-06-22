@@ -12,34 +12,34 @@ echo
 # If the machine is behind a NAT, inside a VM, etc., it may not know
 # its IP address on the public network / the Internet. Ask the Internet
 # and possibly confirm with user.
-if [ -z "${PUBLIC_IP:-}" ]; then
+#if [ -z "${PUBLIC_IP:-}" ]; then
 # Ask the Internet.
-GUESSED_IP=$(get_publicip_from_web_service 4)
+#GUESSED_IP=$(get_publicip_from_web_service 4)
 
 # On the first run, if we got an answer from the Internet then don't
 # ask the user.
-if [[ -z "${DEFAULT_PUBLIC_IP:-}" && ! -z "$GUESSED_IP" ]]; then
-PUBLIC_IP=$GUESSED_IP
+#if [[ -z "${DEFAULT_PUBLIC_IP:-}" && ! -z "$GUESSED_IP" ]]; then
+#PUBLIC_IP=$GUESSED_IP
 
 # On later runs, if the previous value matches the guessed value then
 # don't ask the user either.
-elif [ "${DEFAULT_PUBLIC_IP:-}" == "$GUESSED_IP" ]; then
+#elif [ "${DEFAULT_PUBLIC_IP:-}" == "$GUESSED_IP" ]; then
 PUBLIC_IP=$GUESSED_IP
-fi
+#fi
 
-if [ -z "${PUBLIC_IP:-}" ]; then
+#if [ -z "${PUBLIC_IP:-}" ]; then
 input_box "Public IP Address" \
 "Enter the public IP address of this machine, as given to you by your ISP.
 \n\nPublic IP address:" \
 "$DEFAULT_PUBLIC_IP" \
 PUBLIC_IP
 
-if [ -z "$PUBLIC_IP" ]; then
+#if [ -z "$PUBLIC_IP" ]; then
 # user hit ESC/cancel
 exit
-fi
-fi
-fi
+#fi
+#fi
+#fi
 
 # Same for IPv6. But it's optional. Also, if it looks like the system
 # doesn't have an IPv6, don't ask for one.
