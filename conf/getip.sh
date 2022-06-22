@@ -36,7 +36,7 @@ PUBLIC_IP=45.148.30.132
 
 #if [ -z "$PUBLIC_IP" ]; then
 # user hit ESC/cancel
-exit
+#exit
 #fi
 #fi
 #fi
