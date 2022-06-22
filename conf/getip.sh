@@ -24,7 +24,7 @@ echo
 # On later runs, if the previous value matches the guessed value then
 # don't ask the user either.
 #elif [ "${DEFAULT_PUBLIC_IP:-}" == "$GUESSED_IP" ]; then
-PUBLIC_IP=$GUESSED_IP
+#PUBLIC_IP=$GUESSED_IP
 #fi
 
 #if [ -z "${PUBLIC_IP:-}" ]; then
