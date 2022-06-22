@@ -96,7 +96,7 @@ PUBLIC_IP
 # Use a public API to get our public IP address, or fall back to local network configuration.
 #PUBLIC_IP=$(get_publicip_from_web_service 4 || get_default_privateip 4)
 #fi
-i#f [ "$PUBLIC_IPV6" = "auto" ]; then
+#if [ "$PUBLIC_IPV6" = "auto" ]; then
 # Use a public API to get our public IPv6 address, or fall back to local network configuration.
 #PUBLIC_IPV6=$(get_publicip_from_web_service 6 || get_default_privateip 6)
 #fi
